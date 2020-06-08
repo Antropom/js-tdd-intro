@@ -1,3 +1,12 @@
+const capitalizeFirstLetter = (str) => {
+  return str
+    ? str
+        .split(' ')
+        .map((word) => word[0].toUpperCase() + word.slice(1))
+        .join(' ')
+    : '';
+};
+
 assert.strictEqual(typeof capitalizeFirstLetter, 'function');
 assert.strictEqual(
   capitalizeFirstLetter("C'est grace a Geoffroy que je fais des memes cools"),
